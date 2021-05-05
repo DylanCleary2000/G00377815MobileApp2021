@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <img src="../assets/icon/formula1logo.svg" width="150" >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--This displays navigation buttons to the user-->
+  <ion-button color="danger" [routerLink]="['/home']" routerDirection=backward>Home</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page1']" routerDirection=forward>Drivers</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page2']" routerDirection=forward>Social Media</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page3']" routerDirection=forward>My Driver Profile</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page4']" routerDirection=forward>Services</ion-button>
+  <br>
+  <br>
+  <!--Ionic/Cordova Plugins for Calender and buildinfo are utilized here.-->
+  <h1>Additional Services</h1>
+  <ion-button (click)="addCalender()">Add To your Calender</ion-button>
+  <br>
+  <ion-button (click)="displayBuildInfo()">Developer Build Info</ion-button>
+</ion-content>

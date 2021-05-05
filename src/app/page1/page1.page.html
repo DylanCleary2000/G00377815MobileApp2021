@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <img src="../assets/icon/formula1logo.svg" width="150" >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--This displays navigation buttons to the user-->
+  <ion-button color="danger" [routerLink]="['/home']" routerDirection=backward>Home</ion-button>
+<br>
+  <ion-button color="danger" [routerLink]="['/page1']" routerDirection=forward>Drivers</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page2']" routerDirection=forward>Social Media</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page3']" routerDirection=forward>Team Schedule</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page4']" routerDirection=forward>Services</ion-button>
+
+<ion-list>
+  <ion-item>
+    <!--String interpolation to get the name/age/points/team from the drivers service-->
+    <h1>Formula One drivers this season</h1>
+  </ion-item>
+  <ion-item  *ngFor="let Drivers of driver"><!--Processes the drivers read in from httpclient/jsonblob-->
+    <ion-label>
+    <h1>{{Drivers.name}}</h1>
+    <h2>Age:{{Drivers.age}}</h2>
+    <h2>Points this season:{{Drivers.points}}</h2>
+    <h2>They drive for: {{Drivers.Team}}</h2>
+  </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

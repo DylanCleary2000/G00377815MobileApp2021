@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar >
+    <img src="../assets/icon/formula1logo.svg" width="150" > <!--Logo in the assets folder-->
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
+    <ion-toolbar></ion-toolbar>
   </ion-header>
+<!--This displays navigation buttons to the user-->
+  <ion-button color="danger" [routerLink]="['/page1']" routerDirection=forward>Drivers</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page2']" routerDirection=forward>Social Media</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page3']" routerDirection=forward>My Driver Profile</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page4']" routerDirection=forward>Services</ion-button>
+  <br>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<!--Description of Formula One-->
+  <h1>Formula One</h1>
+  <p>is one of the most, if not THE most popular motorsport in the world.</p>
+  <p>It features 10 teams, alongside 20 drivers competing both for the teams,
+     but also for their own glory in the respective constructors 
+    championship as well as the drivers championship.</p>
+  <p>The word "Formula" in the name refers to the set of rules which all drivers cars must conform.</p>
+  <img src="../assets/icon/f1Cars.jpg" >
+
+  
 </ion-content>

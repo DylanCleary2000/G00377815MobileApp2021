@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <img src="../assets/icon/formula1logo.svg" width="150" >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--This displays navigation buttons to the user-->
+  <ion-button color="danger" [routerLink]="['/home']" routerDirection=backward>Home</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page1']" routerDirection=forward>Drivers</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page2']" routerDirection=forward>Social Media</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page3']" routerDirection=forward>My Driver Profile</ion-button>
+  <br>
+  <ion-button color="danger" [routerLink]="['/page4']" routerDirection=forward>Services</ion-button>
+  <br>
+
+  <!--String interpolation to display the variables.-->
+  <h1>Driver Profile</h1>
+  <h3>The team I'd love to drive for the most has to be {{myFavTeam}}</h3>
+  <h3>My favourite track is {{myFavTrack}}</h3>
+  <h3>My position for this year? {{myPlacement}}</h3>
+
+  <!--Runs the storeDetails() method when clicked to save the driver details into ionic storage-->
+  <ion-button (click)="storeDetails()">Save Driver Details</ion-button>
+
+  <!--Teams/Tracks/Placement values are assigned using radio buttons-->
+  <ion-list>
+    <ion-radio-group [(ngModel)]="myFavTeam">
+      <ion-header>Teams</ion-header><!--TEAMS-->
+      <ion-item>
+        <ion-label>Mercedes</ion-label>
+        <ion-radio value="Mercedes"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Redbull</ion-label>
+        <ion-radio value="Redbull"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Ferrari</ion-label>
+        <ion-radio value="Ferrari"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Renault</ion-label>
+        <ion-radio value="Renault"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Aston Martin</ion-label>
+        <ion-radio value="Aston Martin"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Williams</ion-label>
+        <ion-radio value="Williams"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Haas</ion-label>
+        <ion-radio value="Haas"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>McClaren</ion-label>
+        <ion-radio value="McClaren"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Alpine</ion-label>
+        <ion-radio value="Alpine"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Alpha Romeo</ion-label>
+        <ion-radio value="Alpha Romeo"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br>
+
+    <ion-radio-group [(ngModel)]="myFavTrack">
+      <ion-header>Tracks for this season.</ion-header><!--TRACKS-->
+      <ion-item>
+        <ion-label>Monaco</ion-label>
+        <ion-radio value="Monaco Grand Prix"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Italy</ion-label>
+        <ion-radio value="Italy"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Portugal</ion-label>
+        <ion-radio value="Portugal"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Spain</ion-label>
+        <ion-radio value="Spain"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Azerbaijan</ion-label>
+        <ion-radio value="Azerbaijan"></ion-radio>
+      </ion-item>
+
+        <ion-item>
+          <ion-label>Turkey</ion-label>
+          <ion-radio value="Turkey"></ion-radio>
+        </ion-item>
+
+          <ion-item>
+            <ion-label>France</ion-label>
+            <ion-radio value="France"></ion-radio>
+          </ion-item>
+    </ion-radio-group>
+  <br>
+    <ion-radio-group [(ngModel)]="myPlacement">
+      <ion-header>Your Placement</ion-header><!--Placement Statements-->
+      <ion-item>
+        <ion-label>Below top 10</ion-label>
+        <ion-radio
+          value="Our car this year is not quite up to scratch, we would be lucky to scrape top ten by the end of season.">
+        </ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Top ten</ion-label>
+        <ion-radio value="Im Confident we are well capable of being in the top ten, are car this years performing well.">
+        </ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Best of the rest</ion-label>
+        <ion-radio
+          value="I think I could definitely do better than the current midrange teams, but not quite a winning standard, we'll see">
+        </ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Podium Contender</ion-label>
+        <ion-radio value="Definitely Podium, I wouldnt be here if I wasn't here to win."></ion-radio>
+      </ion-item>
+    
+    </ion-radio-group>
+    </ion-list>
+</ion-content>
